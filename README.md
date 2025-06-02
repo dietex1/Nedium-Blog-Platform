@@ -1,3 +1,5 @@
+# IN PROGRESS
+
 # 📝 Nedium — Laravel Blog Platform
 
 **Nedium** is a fully functional blogging platform built with the Laravel framework. It features user-generated content, social interactions, and a clean, responsive interface. Users can register, create and manage posts, follow other users, and explore content based on authorship and popularity.
