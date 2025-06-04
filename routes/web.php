@@ -13,7 +13,8 @@ Route::get('/', [PostController::class, 'index'])->name('dashboard');
 Route::get('/category/{category}', [PostController::class, 'category'])->name('post.byCategory');
 
 Route::get('/u/{user:username}', [PublicProfileController::class, 'show'])->name('profile.show');
-Route::get('/{username}/{post:slug}',[PostController::class, 'show'])->name('post.show');
+
+Route::get('/u/{username}/{post:slug}',[PostController::class, 'show'])->name('post.show');
 
 
 Route::middleware('auth','verified')->group(function () {
