@@ -1,5 +1,5 @@
 ## 📺 Watch this video to learn how to use the platform and explore its main features:
-[![](UseCase.mp4)](https://gitlab.com/dietex1/nedium-blog-platform/-/blob/main/README.md?ref_type=heads) or find in project UseCase.mp4
+https://gitlab.com/dietex1/nedium-blog-platform/-/blob/main/README.md?ref_type=heads or find in project UseCase.mp4
 
 # 📝 Nedium — Laravel Blog Platform
 
