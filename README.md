@@ -30,7 +30,8 @@
 
 
 ## 📺 Watch this video to learn how to use the platform and explore its main features:
-![](UseCase.mp4)
+[![Watch the video]](https://raw.githubusercontent.com/dietex1/nedium-blog-platform/UseCase.mp4)
+
 
 
 # 📝 Nedium — Laravel Blogovací Platforma
@@ -66,4 +67,4 @@
 ---
 
 ## 📺 Podívejte se na toto video a naučte se, jak používat platformu a prozkoumat její hlavní funkce:
-![](UseCase.mp4)
+[![Watch the video]](https://raw.githubusercontent.com/dietex1/nedium-blog-platform/UseCase.mp4)
