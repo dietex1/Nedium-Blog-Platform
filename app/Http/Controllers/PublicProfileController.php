@@ -11,7 +11,7 @@ class PublicProfileController extends Controller
     {
         return view('profile.show', [
             'user' => $user,
-            'posts' => $user->posts()->latest()->paginate(10),
+            'posts' => $user->posts()->withCount('likes')->orderBy('created_at', 'DESC'),
         ]);
     }
 }

@@ -16,8 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $categories = Category::get();
-        $posts= Post::orderBy('created_at','DESC')->simplepaginate(10);
+        $posts= Post::orderBy('created_at','DESC')->withCount('likes')->simplepaginate(10);
         return view('post.index', [ 'posts' => $posts]);
     }
 
@@ -85,7 +84,7 @@ class PostController extends Controller
 
     public function category(Category $category)
     {
-        $posts = $category->posts()->orderBy('created_at', 'DESC')->simplePaginate(10);
+        $posts = $category->posts()->latest()->withCount('likes')->simplePaginate(10);
         return view('post.index', ['posts' => $posts]);
     }
 }

@@ -21,6 +21,10 @@
             <div>
                 <img src="{{ Storage::url($user->image) }}" alt="{{ $user->name }}" class="w-24 h-24 rounded-full">
             </div>
+        @else
+            <div>
+                <img src="{{ Storage::url('avatars/dummy.png') }}" alt="Default Avatar" class="w-24 h-24 rounded-full">
+            </div>
         @endif
         <!-- Image -->
         <div >
