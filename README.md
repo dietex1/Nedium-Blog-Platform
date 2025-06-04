@@ -10,11 +10,13 @@
 
 * ✅ User authentication and registration
 * 🧑‍🎨 Profile management with avatar upload
+* 🌐 Public user profiles
+* 🔍 Filter posts by theme
 * ✍️ Create, edit, and delete posts
+* * 🔁 Follow/unfollow system
+* 👍 Like/unlike posts
 * 🔗 SEO-friendly URLs with slugs
 * ⏱ Estimated read time for posts
-* 🌐 Public user profiles
-* 🔁 Follow/unfollow system
 * 📱 Responsive UI with Blade templating
 
 ---

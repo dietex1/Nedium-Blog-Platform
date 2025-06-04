@@ -82,4 +82,10 @@ class PostController extends Controller
     {
         //
     }
+
+    public function category(Category $category)
+    {
+        $posts = $category->posts()->orderBy('created_at', 'DESC')->simplePaginate(10);
+        return view('post.index', ['posts' => $posts]);
+    }
 }
