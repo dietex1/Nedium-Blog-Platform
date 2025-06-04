@@ -13,12 +13,12 @@ Route::get('/', [PostController::class, 'index'])->name('dashboard');
 Route::get('/category/{category}', [PostController::class, 'category'])->name('post.byCategory');
 
 Route::get('/u/{user:username}', [PublicProfileController::class, 'show'])->name('profile.show');
+Route::get('/{username}/{post:slug}',[PostController::class, 'show'])->name('post.show');
 
 
 Route::middleware('auth','verified')->group(function () {
     Route::post('/post', [PostController::class, 'store'])->name('post.store');
     Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
-    Route::get('/{username}/{post:slug}',[PostController::class, 'show'])->name('post.show');
     Route::post('/follow/{user}', [FollowerController::class, 'followUnfollow'])->name('follow');
     Route::post('/likes/{post}', [LikesController::class, 'likes'])->name('likes');
 

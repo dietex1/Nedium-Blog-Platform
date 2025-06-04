@@ -1,4 +1,5 @@
 <!-- Like -->
+@auth
 @props(['post'])
 <div class="mt-6 p-2 border-t border-b"
      x-data="{
@@ -32,3 +33,4 @@
 
     </button>
 </div>
+@endauth
