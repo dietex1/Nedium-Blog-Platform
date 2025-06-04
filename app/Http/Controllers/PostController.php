@@ -79,7 +79,11 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        if ($post->user_id !== Auth::id()) {
+            abort(403, 'Unauthorized action.');
+        }
+        $post->delete();
+        return redirect()->route('dashboard')->with('success', 'Post deleted successfully.');
     }
 
     public function category(Category $category)

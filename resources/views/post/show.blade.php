@@ -26,6 +26,20 @@
                             {{ $post->created_at->format('M d, Y') }}
                         </div>
                     </div>
+                    @if ($post->user->id === auth()->id())
+                        <div class="ml-auto flex gap-2">
+                            <x-primary-button href="">
+                                Edit post
+                            </x-primary-button>
+                            <form action="{{ route('post.destroy', $post) }}" method="POST" >
+                                @csrf
+                                @method('DELETE')
+                                <x-danger-button href="">
+                                    Delete
+                                </x-danger-button>
+                            </form>
+                        </div>
+                    @endif
                 </div>
 
                 <x-likes-button :post="$post" class="mt-6" />
