@@ -15,6 +15,7 @@
 * ✍️ Create, edit, and delete posts
 * * 🔁 Follow/unfollow system
 * 👍 Like/unlike posts
+* 📅 Schedule posts for future publication
 * 🔗 SEO-friendly URLs with slugs
 * ⏱ Estimated read time for posts
 * 📱 Responsive UI with Blade templating

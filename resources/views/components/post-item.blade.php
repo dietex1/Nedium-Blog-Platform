@@ -5,6 +5,14 @@
         </a>
         <div class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{ Str::words($post->content,25)}}</div>
         <div class="mb-3 text-sm  text-gray-400 flex items-center gap-4">
+            @if($post->user->image)
+                <img class="w-8 h-8 rounded-full" src="{{ Storage::url($post->user->image) }}" alt="{{ $post->user->name }}">
+            @else
+                <img class="w-8 h-8 rounded-full" src="{{ Storage::url('avatars/dummy.png') }}" alt="Default Avatar">
+            @endif
+            <a href="{{ route('profile.show', $post->user) }}" class="text-black  font-bold hover:underline">
+                {{ $post->user->name }}
+            </a>
             <span href="" >
                 {{ $post->created_at->diffForHumans() }}
              </span>
