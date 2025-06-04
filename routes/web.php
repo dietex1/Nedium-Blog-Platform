@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublicProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FollowerController;
+use App\Http\Controllers\LikesController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,6 +21,7 @@ Route::middleware('auth','verified')->group(function () {
     Route::post('/post', [PostController::class, 'store'])->name('post.store');
     Route::get('/{username}/{post:slug}',[PostController::class, 'show'])->name('post.show');
     Route::post('/follow/{user}', [FollowerController::class, 'followUnfollow'])->name('follow');
+    Route::post('/likes/{post}', [LikesController::class, 'likes'])->name('likes');
 
 });
 
