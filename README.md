@@ -1,3 +1,6 @@
+## 📺 Watch this video to learn how to use the platform and explore its main features:
+[![](UseCase.mp4)](https://gitlab.com/dietex1/nedium-blog-platform/-/blob/main/README.md?ref_type=heads) or find in project UseCase.mp4
+
 # 📝 Nedium — Laravel Blog Platform
 
 **Nedium** is a fully functional blogging platform built with the Laravel framework. It features user content, social interactions, and a clean, responsive interface. Users can register, create and manage posts, follow other users.
@@ -27,10 +30,6 @@
 * **Database:** MySQL
 * **Authentication:** Laravel Breeze
 * **Storage:** Local disk (public avatars & post images)
-
-
-## 📺 Watch this video to learn how to use the platform and explore its main features:
-[![Watch the video]](https://raw.githubusercontent.com/dietex1/nedium-blog-platform/UseCase.mp4)
 
 
 
@@ -65,6 +64,3 @@
 * **Úložiště:** Lokální disk (veřejné avatary a obrázky v příspěvcích)
 
 ---
-
-## 📺 Podívejte se na toto video a naučte se, jak používat platformu a prozkoumat její hlavní funkce:
-[![Watch the video]](https://raw.githubusercontent.com/dietex1/nedium-blog-platform/UseCase.mp4)
