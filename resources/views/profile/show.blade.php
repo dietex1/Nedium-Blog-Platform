@@ -28,13 +28,15 @@
                         <p>
                             {{ $user->bio ?? 'No bio available.' }}
                         </p>
-                         @if($user->id !== auth()->id())
+                        @auth
+                         @if($user->id !== auth()->id() )
                         <div class="mt-4">
                             <button class="bg-emerald-600 rounded-full text-white px-4 py-2  hover:bg-emerald-700 transition-colors duration-300">
                                 Follow
                             </button>
                         </div>
                          @endif
+                        @endauth
                     </div>
                 </div>
             </div>
