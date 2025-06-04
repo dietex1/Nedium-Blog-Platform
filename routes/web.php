@@ -20,6 +20,8 @@ Route::get('/u/{username}/{post:slug}',[PostController::class, 'show'])->name('p
 Route::middleware('auth','verified')->group(function () {
     Route::post('/post', [PostController::class, 'store'])->name('post.store');
     Route::get('/post/create', [PostController::class, 'create'])->name('post.create');
+    Route::get('/post/{post:slug}/edit', [PostController::class, 'edit'])->name('post.edit');
+    Route::put('/post/{post}', [PostController::class, 'update'])->name('post.update');
     Route::delete('/post/{post}', [PostController::class, 'destroy'])->name('post.destroy');
     Route::post('/follow/{user}', [FollowerController::class, 'followUnfollow'])->name('follow');
     Route::post('/likes/{post}', [LikesController::class, 'likes'])->name('likes');

@@ -28,7 +28,7 @@
                     </div>
                     @if ($post->user->id === auth()->id())
                         <div class="ml-auto flex gap-2">
-                            <x-primary-button href="">
+                            <x-primary-button href="{{ route('post.edit', $post->slug) }}">
                                 Edit post
                             </x-primary-button>
                             <form action="{{ route('post.destroy', $post) }}" method="POST" >

@@ -74,9 +74,7 @@
         <!-- Bio -->
         <div class="mt-4">
             <x-input-label for="bio" :value="__('Bio')" />
-            <x-text-area id="bio" class="block mt-1 w-full"  name="bio"  >
-                {{ old('bio', $user->bio) }}
-            </x-text-area>
+            <x-text-area id="bio" name="bio" class="block mt-1 w-full" :value="old('bio', $user->bio)" />
             <x-input-error :messages="$errors->get('bio')" class="mt-2" />
         </div>
 
