@@ -17,21 +17,7 @@
                         </div>
                     </div>
 
-                    <div
-                        x-data="{
-                                following: @json($user->isFollowedBy(auth()->user())),
-                                followersCount: @json($user->followers()->count()),
-                                follow() {
-                                    axios.post('/follow/{{ $user->id }}')
-                                    .then(res => {
-                                          this.following = !this.following;
-                                          this.followersCount = res.data.followersCount;
-                                        })
-                                            .catch(err => console.error(err));
-                                    }
-                                 }"
-                        class="w-[320px]  px-8"
-                    >
+                    <x-follow-ctr :user="$user"  >
                         @if($user->image)
                             <img src="{{ Storage::url($user->image) }}" alt="{{ $user->name }}" class="w-16 h-16 rounded-full">
                         @else
@@ -54,7 +40,7 @@
                             </div>
                           @endif
                         @endauth
-                    </div>
+                    </x-follow-ctr>
                 </div>
             </div>
         </div>

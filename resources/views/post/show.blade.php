@@ -12,11 +12,14 @@
                     @endif
 
                     <div>
-                        <div class="flex gap-2">
+                        <x-follow-ctr :user="$post->user"  class="flex gap-2">
                             <a class="font-semibold hover:underline" href="{{route('profile.show', $post->user)}}" >{{ $post->user->name }}</a>
-                            &middot;
-                            <a href="$" class="text-emerald-400 font-semibold">Follow</a>
-                        </div>
+                            @if (auth()->check() && auth()->user()->id !== $post->user->id)
+                                &middot;
+                                <button  class=" font-semibold" x-text="following ? 'Unfollow' : 'Follow'"
+                                   :class="following ? 'text-red-400' : 'text-emerald-400'" @click="follow()"></button>
+                            @endif
+                        </x-follow-ctr>
                         <div class="flex gap-2 text-gray-500 text-sm">
                             {{ $post->readTime() }} min read
                             &middot;
