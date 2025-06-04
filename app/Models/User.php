@@ -47,8 +47,8 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsToMany(
             User::class,
             'followers',
-            'follower_id',
-            'user_id'
+            'user_id',
+            'follower_id'
         );
     }
 
@@ -57,8 +57,8 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->belongsToMany(
             User::class,
             'followers',
-            'user_id',
-            'follower_id'
+            'follower_id',
+            'user_id'
         );
     }
 
