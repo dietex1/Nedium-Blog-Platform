@@ -38,7 +38,9 @@
                             <img src="{{ Storage::url('avatars/dummy.png') }}" alt="Default Avatar" class="w-20 h-20 rounded-full">
                         @endif
                         <h3 class="text-2xl font-bold">{{ $user->name }}</h3>
-                        <p class="text-gray-500"> <span x-text="followersCount"></span> folowers </p>
+                            <p class="text-gray-500">
+                                <span x-text="followersCount + ' ' + (followersCount === 1 ? 'follower' : 'followers')"></span>
+                            </p>
                         <p>
                             {{ $user->bio ?? 'No bio available.' }}
                         </p>
